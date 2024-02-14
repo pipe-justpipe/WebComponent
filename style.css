@@ -33,6 +33,10 @@ todo-list {
   margin:15px 0;
   
 }
+.pull{
+  padding: 15px 0 0 0;
+  border-top: 1px solid lightgray;
+}
 
 .checkbox {
   opacity: 0;

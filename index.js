@@ -92,8 +92,7 @@ class HrSub extends HTMLElement {
     container.innerHTML = `
     <link rel="stylesheet" href="style.css">
       <div class="hr_subheading">
-         <hr/>
-        <span class="text">Pull from recurring lists</span>
+        <span class="text pull" >Pull from recurring lists</span>
       </div>
     `;
 
@@ -230,20 +229,6 @@ class CustomRangeSlider extends HTMLElement {
 }
 
 customElements.define('custom-range-slider', CustomRangeSlider);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
