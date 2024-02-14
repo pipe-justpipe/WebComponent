@@ -239,39 +239,3 @@ customElements.define('custom-range-slider', CustomRangeSlider);
 
 
 
-// class ProgressBar extends HTMLElement {
-//   constructor() {
-//       super();
-
-//       this.attachShadow({ mode: 'open' });
-//       this.shadowRoot.innerHTML = `
-//       <style>
-      
-//       </style>
-//           <link rel="stylesheet" href="style.css">
-//           <div class="progress-bar">
-//               <div class="percentage">0%</div>
-//           </div>
-//       `;
-
-//       this.progressBar = this.shadowRoot.querySelector('.progress-bar');
-//       this.percentageText = this.shadowRoot.querySelector('.percentage');
-//   }
-
-//   connectedCallback() {
-//       this.animateProgressBar();
-//   }
-
-//   animateProgressBar() {
-//       const progressBarAnimation = this.progressBar.animate(
-//           [{ width: '0' }, { width: '90%' }],
-//           { duration: 2000, easing: 'linear', fill: 'forwards' }
-//       );
-
-//       progressBarAnimation.onfinish = () => {
-//           this.percentageText.textContent = '90%';
-//       };
-//   }
-// }
-
-// customElements.define('progress-bar', ProgressBar);

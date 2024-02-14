@@ -104,16 +104,13 @@ span {
   display: flex;
 
 }
-.plus {
-  color: red;
-}
 
 .header-container h1 {
   margin-right: 10px;
 }
 
 .header-container .plus {
-  color: rgb(235, 230, 230);
+  color: #B3B3EF;
   cursor: pointer;
 }
 
