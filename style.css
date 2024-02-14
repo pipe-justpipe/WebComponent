@@ -9,7 +9,13 @@ body {
   padding: 20px;
   background-color: #fff;
 }
-
+#addTodo{
+  border: none;
+  background-color: #b3b3ef;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 10px;
+}
 todo-list {
   display: flex;
   align-items: center;
@@ -24,7 +30,7 @@ todo-list {
 .checkbox-container {
   display: flex;
   align-items: center;
-  margin:20px 0;
+  margin:15px 0;
   
 }
 
@@ -153,10 +159,13 @@ margin-bottom: 300px;
   background-color: rgb(235, 230, 230);
   overflow: hidden;
 }
+.percentage{
+  color: red;
+}
 .slider-container .bar .fill {
   display: block;
   height: 100%;
-  background-color: #B5EA81;
+  background-color: #B3B3EF;
 }
 .slider-container .slider {
   position: relative;
@@ -173,7 +182,7 @@ margin-bottom: 300px;
   -webkit-appearance: none;
   width: 30px;
   height: 30px;
-  background-color: #0f9d58;
+  background-color: rgb(104, 66, 104);
   border-radius: 50%;
   transform: rotate(-45deg) translate(0%, 0%);
   cursor: pointer;
@@ -209,7 +218,8 @@ margin-bottom: 300px;
 }
 
 .text {
-  color: #B3B3EF;
+  color: rgb(179, 174, 174);
+  font-weight: 300;
 }
 
 .input-container {
@@ -233,7 +243,7 @@ input {
 }
 hr{
   width: 100%;
-  border-color:red;
+  border-color:rgb(185, 182, 182);
 }
 
 

@@ -13,7 +13,7 @@ class TodoList extends HTMLElement {
       <div class="checkbox-container">
         <input type="checkbox" class="checkbox">
         <span class="custom-checkbox"></span>
-        <span class="title"></span>
+        <span class="title text"></span>
       </div>
     `;
     this.checkbox = wrapper.querySelector(".checkbox");
@@ -93,7 +93,7 @@ class HrSub extends HTMLElement {
     <link rel="stylesheet" href="style.css">
       <div class="hr_subheading">
          <hr/>
-        <span>Pull from recurring lists</span>
+        <span class="text">Pull from recurring lists</span>
       </div>
     `;
 
@@ -133,7 +133,7 @@ class CustomHeader extends HTMLElement {
     const plusSign = container.querySelector('.plus');
     plusSign.addEventListener('click', () => this.showInput());
 
-    // Store the input element for later use
+    // I am storing the input element for later use
     this.inputElement = container.querySelector('#todoInput');
 
     const addTodoButton = container.querySelector('#addTodo');
@@ -185,6 +185,9 @@ class CustomButton extends HTMLElement {
     button.style.padding="10px 20px";
     button.style.borderRadius="20px";
     button.style.cursor="pointer";
+    button.style.width="100px";
+    button.style.color="gray";
+    button.style.fontSize="16px";
 
     shadow.appendChild(button);
   }
@@ -206,7 +209,8 @@ class CustomRangeSlider extends HTMLElement {
         <div class="bar">
           <div class="fill"></div>
         </div>
-        <input type="range" id="slider" class="slider" min="0" max="100" value="50">
+        <input type="range" id="slider" class="slider" min="0" max="100" value="33">
+        <span style="display:flex; justify-content:center; align-items:center; margin:20px 0 0 0; color:#B3B3EF;">33% complete</span>
       </div>
     `;
 
@@ -250,39 +254,39 @@ customElements.define('custom-range-slider', CustomRangeSlider);
 
 
 
-class ProgressBar extends HTMLElement {
-  constructor() {
-      super();
+// class ProgressBar extends HTMLElement {
+//   constructor() {
+//       super();
 
-      this.attachShadow({ mode: 'open' });
-      this.shadowRoot.innerHTML = `
-      <style>
+//       this.attachShadow({ mode: 'open' });
+//       this.shadowRoot.innerHTML = `
+//       <style>
       
-      </style>
-          <link rel="stylesheet" href="style.css">
-          <div class="progress-bar">
-              <div class="percentage">0%</div>
-          </div>
-      `;
+//       </style>
+//           <link rel="stylesheet" href="style.css">
+//           <div class="progress-bar">
+//               <div class="percentage">0%</div>
+//           </div>
+//       `;
 
-      this.progressBar = this.shadowRoot.querySelector('.progress-bar');
-      this.percentageText = this.shadowRoot.querySelector('.percentage');
-  }
+//       this.progressBar = this.shadowRoot.querySelector('.progress-bar');
+//       this.percentageText = this.shadowRoot.querySelector('.percentage');
+//   }
 
-  connectedCallback() {
-      this.animateProgressBar();
-  }
+//   connectedCallback() {
+//       this.animateProgressBar();
+//   }
 
-  animateProgressBar() {
-      const progressBarAnimation = this.progressBar.animate(
-          [{ width: '0' }, { width: '90%' }],
-          { duration: 2000, easing: 'linear', fill: 'forwards' }
-      );
+//   animateProgressBar() {
+//       const progressBarAnimation = this.progressBar.animate(
+//           [{ width: '0' }, { width: '90%' }],
+//           { duration: 2000, easing: 'linear', fill: 'forwards' }
+//       );
 
-      progressBarAnimation.onfinish = () => {
-          this.percentageText.textContent = '90%';
-      };
-  }
-}
+//       progressBarAnimation.onfinish = () => {
+//           this.percentageText.textContent = '90%';
+//       };
+//   }
+// }
 
-customElements.define('progress-bar', ProgressBar);
+// customElements.define('progress-bar', ProgressBar);
