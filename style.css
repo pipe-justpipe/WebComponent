@@ -25,7 +25,9 @@ todo-list {
 .arrow-back-container {
   display: flex;
   color: #b3b3ef;
+  align-items: center;
 }
+
 
 .checkbox-container {
   display: flex;

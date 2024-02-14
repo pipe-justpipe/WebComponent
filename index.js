@@ -64,7 +64,7 @@ class ArrowBack extends HTMLElement {
     }
     </style>
         <div class="arrow-back-container">
-    <span>&larr;</span>
+    <span style="font-size:30px; align-self: center;">&larr;</span>
     <span>Back to lists</span>
         </div>
       `;
